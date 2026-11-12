@@ -69,10 +69,10 @@ function BookingPage() {
           const cinemaData = await pb.collection('cinemas').getOne<Cinema>(hallData.cinemaId);
           setCinema(cinemaData);
         } catch {
-          // Кинотеатр не критичен для отображения схемы
+          
         }
 
-        // Загружаем бронирования
+        
         const bookings = await pb.collection('bookings').getFullList({
           filter: `sessionId = "${sessionData.id}"`,
         });
@@ -92,7 +92,7 @@ function BookingPage() {
           }
         });
 
-        // Генерируем схему
+        
         const rows = Number(hallData.rows) || 8;
         const seatsPerRow = Number(hallData.seatsPerRow) || 12;
         const generatedSeats: Seat[][] = [];
@@ -207,12 +207,12 @@ function BookingPage() {
           </div>
           {cinema && (
             <p className="mt-2 text-sm text-[var(--text-muted)] flex items-center gap-2">
-              📍 {cinema.address} (м. {cinema.metro})
+               {cinema.address} (м. {cinema.metro})
             </p>
           )}
         </div>
 
-        {/* Легенда */}
+        {}
         <div className="flex flex-wrap gap-6 mb-10 justify-center md:justify-start animate-fade-up">
           <div className="flex items-center gap-2">
             <div className="w-5 h-5 rounded bg-[var(--surface)] border-2 border-[var(--border)]"></div>
@@ -232,7 +232,7 @@ function BookingPage() {
           </div>
         </div>
 
-        {/* Схема зала */}
+        {}
         <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 md:p-10 mb-8 overflow-x-auto animate-fade-up">
           <div className="text-center mb-10">
             <div className="inline-block w-2/3 h-2 bg-gradient-to-b from-[var(--text-muted)] to-transparent rounded-full opacity-30"></div>
@@ -294,7 +294,7 @@ function BookingPage() {
         </div>
       </div>
 
-      {/* Sticky панель итогов */}
+      {}
       {selectedSeats.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 bg-[var(--surface)] border-t border-[var(--border)] backdrop-blur-xl z-40 animate-fade-up">
           <div className="max-w-4xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">

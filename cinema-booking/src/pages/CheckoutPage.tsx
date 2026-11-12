@@ -198,7 +198,7 @@ function CheckoutPage() {
               </div>
               {discount > 0 && (
                 <p className="mt-3 text-sm text-green-400">
-                  ✓ Скидка {discount}% применена
+                  Скидка {discount}% применена
                 </p>
               )}
               {promoError && (
@@ -235,7 +235,7 @@ function CheckoutPage() {
                 <span className="text-2xl font-bold">{finalPrice} ₽</span>
               </div>
 
-              {/* Форма */}
+              {}
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-xs text-[var(--text-muted)] mb-2 uppercase tracking-wider">
@@ -287,7 +287,7 @@ function CheckoutPage() {
                   disabled={isProcessing}
                   className="w-full py-4 bg-[var(--accent)] hover:bg-[var(--accent-hover)] disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-lg font-semibold transition-colors shadow-lg shadow-[var(--accent)]/20"
                 >
-                  {isProcessing ? 'Оформление...' : `Оплатить ${finalPrice} ₽`}
+                  {isProcessing ? 'Оформление' : `Оплатить ${finalPrice} ₽`}
                 </button>
               </form>
             </div>

@@ -54,7 +54,7 @@ function HomePage() {
     });
   }, [movies, searchQuery, selectedGenre]);
 
-  // Первый фильм — для hero-секции
+  
   const featured = movies[0];
 
   if (isLoading) {
@@ -70,7 +70,7 @@ function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Навигация */}
+      
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/80 backdrop-blur-xl border-b border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="text-xl font-bold tracking-tight">
@@ -85,7 +85,7 @@ function HomePage() {
         </div>
       </nav>
 
-      {/* Hero — большой постер первого фильма */}
+      {}
       {featured && (
         <section className="relative h-[85vh] overflow-hidden">
           <img
@@ -134,7 +134,7 @@ function HomePage() {
         </section>
       )}
 
-      {/* Фильтры */}
+      {}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
           <h2 className="text-3xl font-bold tracking-tight">Все фильмы</h2>
@@ -148,7 +148,7 @@ function HomePage() {
           />
         </div>
 
-        {/* Жанры — горизонтальный скролл */}
+        {}
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-4 mb-12">
           {allGenres.map((genre) => (
             <button
@@ -165,7 +165,7 @@ function HomePage() {
           ))}
         </div>
 
-        {/* Сетка фильмов */}
+        {}
         {filteredMovies.length === 0 ? (
           <div className="text-center py-20">
             <p className="text-[var(--text-muted)] text-lg">Ничего не найдено</p>
@@ -205,14 +205,14 @@ function HomePage() {
         )}
       </section>
 
-      {/* Футер */}
+      {}
       <footer className="border-t border-[var(--border)] mt-20">
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-[var(--text-muted)]">
             КИНО. © 2026
           </p>
           <p className="text-xs text-[var(--text-muted)]">
-            Учебный проект • React + PocketBase
+            Vasileva M. A.
           </p>
         </div>
       </footer>

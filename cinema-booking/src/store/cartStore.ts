@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Seat } from '../types';
 
-// Универсальные типы — совместимы и с data/, и с PocketBase
+
 export interface Movie {
   id: string | number;
   title: string;

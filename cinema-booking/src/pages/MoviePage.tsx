@@ -137,7 +137,7 @@ function MoviePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Навигация */}
+      {}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/80 backdrop-blur-xl border-b border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="text-xl font-bold tracking-tight">
@@ -152,7 +152,7 @@ function MoviePage() {
         </div>
       </nav>
 
-      {/* Hero с backdrop */}
+      {}
       <section className="relative h-[70vh] overflow-hidden">
         <img
           src={movie.backdrop || movie.poster}
@@ -187,7 +187,7 @@ function MoviePage() {
         </div>
       </section>
 
-      {/* Контент */}
+      {}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Постер */}
@@ -199,9 +199,9 @@ function MoviePage() {
             />
           </div>
 
-          {/* Информация */}
+          {}
           <div className="md:col-span-2 space-y-10 animate-fade-up">
-            {/* Описание */}
+            {}
             <div>
               <h2 className="text-2xl font-bold mb-4">Описание</h2>
               <p className="text-[var(--text-muted)] leading-relaxed text-lg">
@@ -209,7 +209,7 @@ function MoviePage() {
               </p>
             </div>
 
-            {/* Жанры */}
+            {}
             <div>
               <h2 className="text-2xl font-bold mb-4">Жанры</h2>
               <div className="flex flex-wrap gap-2">
@@ -224,7 +224,7 @@ function MoviePage() {
               </div>
             </div>
 
-            {/* Режиссёр и актёры */}
+            {}
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h3 className="text-[var(--text-muted)] text-sm mb-2">Режиссёр</h3>
@@ -236,7 +236,7 @@ function MoviePage() {
               </div>
             </div>
 
-            {/* Кинотеатр */}
+            {}
             {cinema && (
               <div className="bg-[var(--surface)] border border-[var(--border)] rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">{cinema.name}</h3>
@@ -261,7 +261,7 @@ function MoviePage() {
               </div>
             )}
 
-            {/* Расписание сеансов */}
+            {}
             <div>
               <h2 className="text-2xl font-bold mb-6">Расписание сеансов</h2>
 
@@ -271,7 +271,7 @@ function MoviePage() {
                 </p>
               ) : (
                 <>
-                  {/* Даты */}
+                  {}
                   <div className="mb-6">
                     <h3 className="text-[var(--text-muted)] text-sm mb-3">Дата</h3>
                     <div className="flex flex-wrap gap-2">
@@ -295,7 +295,7 @@ function MoviePage() {
                     </div>
                   </div>
 
-                  {/* Форматы */}
+                  {}
                   <div className="mb-8">
                     <h3 className="text-[var(--text-muted)] text-sm mb-3">Формат</h3>
                     <div className="flex flex-wrap gap-2">
@@ -315,7 +315,7 @@ function MoviePage() {
                     </div>
                   </div>
 
-                  {/* Сеансы */}
+                  {}
                   {filteredSessions.length === 0 ? (
                     <p className="text-[var(--text-muted)] text-center py-12">
                       Нет сеансов на выбранную дату
@@ -345,14 +345,14 @@ function MoviePage() {
         </div>
       </section>
 
-      {/* Футер */}
+      {}
       <footer className="border-t border-[var(--border)] mt-20">
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-[var(--text-muted)]">
             КИНО. © 2026
           </p>
           <p className="text-xs text-[var(--text-muted)]">
-            Учебный проект • React + PocketBase
+            Vasileva M. A.
           </p>
         </div>
       </footer>
